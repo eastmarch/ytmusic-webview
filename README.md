@@ -1,7 +1,7 @@
 # YT Music for Windows
 YT Music app that uses Edge WebView2
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshots/screenshot.png)
 
 ## Features (Edge WebView2)
 - Lighter than Electron
