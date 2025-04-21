@@ -28,7 +28,14 @@ namespace YTMusicUWP
         /// </summary>
         public App()
         {
-            Environment.SetEnvironmentVariable("WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS", "--restore-last-session --disable-background-timer-throttling --msWebView2CodeCache --disable-features=msSmartScreenProtection");
+            Environment.SetEnvironmentVariable("WEBVIEW2_DEFAULT_BACKGROUND_COLOR", "FF000000");
+            Environment.SetEnvironmentVariable("WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS", @"
+                --restore-last-session 
+                --disable-background-timer-throttling 
+                --disable-site-isolation-trials 
+                --msWebView2CodeCache 
+                --enable-features=WarmUpCompositor,Prerender2WarmUpCompositor,OverlayScrollbar,msOverlayScrollbarWinStyle:scrollbar_mode/minimal_mode,msOverlayScrollbarWinStyleAnimation 
+                --disable-features=msSmartScreenProtection,OverscrollHistoryNavigation,ElasticOverscroll");
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

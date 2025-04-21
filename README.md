@@ -1,13 +1,13 @@
 # YT Music for Windows
 YT Music app that uses Edge WebView2
 
-![Screenshot](screenshots/screenshot.png)
+![Screenshot](assets/screenshot.png)
 
 ## Features (Edge WebView2)
 - Lighter than Electron
 - Does not require Microsoft Edge
 - Up to date webview based on the current version of Chromium
-- Shared instance with other webview apps running (less memory)
+- Site isolation disabled (less memory)
 - Supports efficent mode for background processes (less battery)
 - Media controls on quick settings / Media shortcuts from the keyboard
 - Opens the app much faster compared to alternatives
@@ -15,7 +15,7 @@ YT Music app that uses Edge WebView2
 - Back button on the top-left
 
 ## How to install
-- Enable "developer mode" on the Settings app
+- Enable "developer mode" in the [Settings](ms-settings:developers) app
 - Allow the execution of local PowerShell scripts in the same tab
 - Download the zip file from releases
 - Extract it to a folder

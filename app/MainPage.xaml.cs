@@ -1,4 +1,5 @@
-﻿using Microsoft.Web.WebView2.Core;
+﻿using Microsoft.UI.Xaml.Controls;
+using Microsoft.Web.WebView2.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,6 +35,12 @@ namespace YTMusicUWP
             {
                 WebView2.CoreWebView2.GoBack();
             }
+        }
+
+        private void ChangeWebViewSettings(WebView2 sender, CoreWebView2InitializedEventArgs args)
+        {
+            sender.CoreWebView2.Settings.IsGeneralAutofillEnabled = false;
+            sender.CoreWebView2.Settings.IsPasswordAutosaveEnabled = false;
         }
     }
 }

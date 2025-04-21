@@ -8,8 +8,9 @@
     xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
     <Grid>
-        <controls:WebView2 x:Name="WebView2" Source="https://music.youtube.com"/>
+        <controls:WebView2 x:Name="WebView2" 
+            CoreWebView2Initialized="ChangeWebViewSettings"
+            Source="https://music.youtube.com"/>
     </Grid>
 </Page>
