@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace YTMusicUWP
@@ -30,11 +20,12 @@ namespace YTMusicUWP
         {
             Environment.SetEnvironmentVariable("WEBVIEW2_DEFAULT_BACKGROUND_COLOR", "FF000000");
             Environment.SetEnvironmentVariable("WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS", @"
-                --restore-last-session 
                 --disable-background-timer-throttling 
                 --disable-site-isolation-trials 
+                --no-sandbox 
                 --msWebView2CodeCache 
-                --enable-features=WarmUpCompositor,Prerender2WarmUpCompositor,OverlayScrollbar,msOverlayScrollbarWinStyle:scrollbar_mode/minimal_mode,msOverlayScrollbarWinStyleAnimation 
+                --msEnhancedTextContrast 
+                --enable-features=Windows11MicaTitlebar,OverlayScrollbar,msOverlayScrollbarWinStyle:scrollbar_mode/minimal_mode,msOverlayScrollbarWinStyleAnimation 
                 --disable-features=msSmartScreenProtection,OverscrollHistoryNavigation,ElasticOverscroll");
             this.InitializeComponent();
             this.Suspending += OnSuspending;

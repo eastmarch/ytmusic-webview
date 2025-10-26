@@ -10,7 +10,7 @@
   <Identity
     Name="7e053cd8-2f6f-46f0-b7bb-b27448358047"
     Publisher="CN=eastmarch"
-    Version="1.0.3.0" />
+    Version="1.0.4.0" />
 
   <mp:PhoneIdentity PhoneProductId="7e053cd8-2f6f-46f0-b7bb-b27448358047" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

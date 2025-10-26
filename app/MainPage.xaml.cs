@@ -1,21 +1,8 @@
 ﻿using Microsoft.UI.Xaml.Controls;
 using Microsoft.Web.WebView2.Core;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.Media;
 using Windows.UI.Core;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 namespace YTMusicUWP
 {
@@ -41,6 +28,15 @@ namespace YTMusicUWP
         {
             sender.CoreWebView2.Settings.IsGeneralAutofillEnabled = false;
             sender.CoreWebView2.Settings.IsPasswordAutosaveEnabled = false;
+            sender.CoreWebView2.Settings.IsReputationCheckingRequired = false;
+            sender.CoreWebView2.NewWindowRequested += OnNewWindowRequested;
         }
+
+        private async void OnNewWindowRequested(CoreWebView2 sender, CoreWebView2NewWindowRequestedEventArgs args)
+        {
+            args.Handled = true;
+            await Windows.System.Launcher.LaunchUriAsync(new Uri(args.Uri));
+        }
+
     }
 }
