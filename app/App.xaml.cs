@@ -25,8 +25,9 @@ namespace YTMusicUWP
                 --no-sandbox 
                 --msWebView2CodeCache 
                 --msEnhancedTextContrast 
-                --enable-features=Windows11MicaTitlebar,OverlayScrollbar,msOverlayScrollbarWinStyle:scrollbar_mode/minimal_mode,msOverlayScrollbarWinStyleAnimation 
-                --disable-features=msSmartScreenProtection,OverscrollHistoryNavigation,ElasticOverscroll");
+                --enable-features=UseNativeThreadPool,AutoPictureInPictureForVideoPlayback,OverlayScrollbar,msVisualRejuvMica,msOverlayScrollbarWinStyle 
+                --disable-features=msSmartScreenProtection,OverscrollHistoryNavigation,ElasticOverscroll 
+            ");
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
